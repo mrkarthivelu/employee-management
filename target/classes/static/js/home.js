@@ -10,6 +10,12 @@ $(document).ready(function() {
 			$("#companyId").html(result);
 		}
 	});
+	$.ajax({
+		url : "getEmployeeType",
+		success : function(result) {
+			$("#employeeType").html(result);
+		}
+	});
 
 	$("#addEmployee").submit(function() {
 
@@ -23,6 +29,7 @@ $(document).ready(function() {
 				"aadhaar" : $("#aadhaar").val(),
 				"mobileNo" : $("#mobileNo").val(),
 				"companyId" : $("#companyId").val(),
+				"employeeType" : $("#employeeType").val(),
 				"experience" : $("#experience").val()
 			}),
 			success : function(data, success, xhr) {

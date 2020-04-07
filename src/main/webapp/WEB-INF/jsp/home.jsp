@@ -46,6 +46,12 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label class="control-label col-sm-2">Employee Type :</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="employeeType" ></select>
+				</div>
+			</div>
+			<div class="form-group">
 				<label class="control-label col-sm-2">Experience :</label>
 				<div class="col-sm-4">
 					<input class="form-control" type="text" id="experience" />
