@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "EMPLOYEE")
 public class Employee {
@@ -24,11 +26,11 @@ public class Employee {
 	@Column(name = "companyid")
 	private long companyId;
 	@Column(name = "joiningdate")
+	@Type(type = "date")
 	private Date joiningDate;
 	private double experience;
 	private String status;
-	private long employeeType;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -101,19 +103,11 @@ public class Employee {
 		this.status = status;
 	}
 
-	public long getEmployeeType() {
-		return employeeType;
-	}
-
-	public void setEmployeeType(long employeeType) {
-		this.employeeType = employeeType;
-	}
-
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", aadhaar=" + aadhaar + ", mobileNo="
 				+ mobileNo + ", companyId=" + companyId + ", joiningDate=" + joiningDate + ", experience=" + experience
-				+ ", status=" + status + ", employeeType=" + employeeType + "]";
+				+ ", status=" + status + "]";
 	}
 
 }
